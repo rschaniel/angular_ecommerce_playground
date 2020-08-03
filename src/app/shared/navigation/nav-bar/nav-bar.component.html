@@ -1,0 +1,11 @@
+<nav>
+  <button *ngIf="backLink" mat-button data-test-selector="back-button"
+          [routerLink]="backLink">
+    Back
+  </button>
+
+  <button *ngIf="nextLink" mat-button data-test-selector="next-button"
+          [routerLink]="nextLink" color="primary" [disabled]="disabled">
+    Next
+  </button>
+</nav>

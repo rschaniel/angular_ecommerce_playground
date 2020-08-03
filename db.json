@@ -1,0 +1,36 @@
+{
+  "basket-items": [
+    {
+      "name": "Book",
+      "price": 20,
+      "quantity": 1
+    },
+    {
+      "name": "Pencil",
+      "price": 2,
+      "quantity": 3
+    }
+  ],
+  "customer": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "city": "Zurich"
+  },
+  "shipment": {
+    "availableMethods": [
+      "Post",
+      "Pickup"
+    ]
+  },
+  "payment": {
+    "availableMethods": [
+      "Credit Card",
+      "Invoice"
+    ]
+  },
+  "orders": [
+    {
+      "id": "1"
+    }
+  ]
+}

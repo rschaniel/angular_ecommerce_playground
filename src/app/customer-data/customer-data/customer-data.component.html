@@ -1,0 +1,13 @@
+<h1>Customer Data</h1>
+
+<div *ngIf="customer$ | async as customer; else loading">
+  {{customer.firstName}} {{customer.lastName}}<br/>
+  {{customer.city}}
+  <app-nav-bar backLink="/basket" nextLink="/shipment"></app-nav-bar>
+</div>
+
+<ng-template #loading>
+  Loading...
+  <app-nav-bar disabled="true" backLink="/basket" nextLink="/shipment"></app-nav-bar>
+</ng-template>
+

@@ -1,0 +1,15 @@
+<h1>Basket</h1>
+
+<div *ngIf="items$ | async as items; else loading">
+  <ul>
+    <li *ngFor="let item of items">
+      {{item.quantity}}x {{item.name}} {{item.price}}$
+    </li>
+  </ul>
+  <app-nav-bar nextLink="/customer-data"></app-nav-bar>
+</div>
+
+<ng-template #loading>
+  Loading...
+  <app-nav-bar disabled="true" nextLink="/customer-data"></app-nav-bar>
+</ng-template>
