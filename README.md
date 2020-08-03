@@ -1,6 +1,8 @@
 # PrefetchingSample
 
-## E-Commerce Checkout application with the following steps
+## E-Commerce Checkout application
+
+Pages
 * Basket
 * Customer data
 * Shipment
