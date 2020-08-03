@@ -1,6 +1,14 @@
 # PrefetchingSample
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+## E-Commerce Checkout application with the following steps
+* Basket
+* Customer data
+* Shipment
+* Payment
+* Summary
+* Confirmation
+
+Uses NGRX and was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
 ## Development server
 
@@ -26,10 +34,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-## E-Commerce Checkout steps
-* Basket
-* Customer data
-* Shipment
-* Payment
-* Summary
-* Confirmation
