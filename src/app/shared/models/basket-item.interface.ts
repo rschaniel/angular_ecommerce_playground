@@ -1,5 +1,7 @@
+export type price = number;
+
 export interface BasketItem {
   name: string;
-  price: number;
+  price: price;
   quantity: number;
 }

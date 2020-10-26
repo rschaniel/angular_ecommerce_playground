@@ -7,7 +7,7 @@
 </div>
 
 <ng-template #loading>
-  Loading...
-  <app-nav-bar disabled="true" backLink="/basket" nextLink="/shipment"></app-nav-bar>
+  <mat-spinner></mat-spinner>
+  <app-nav-bar [disabled]="true" backLink=".." nextLink="/shipment"></app-nav-bar>
 </ng-template>
 

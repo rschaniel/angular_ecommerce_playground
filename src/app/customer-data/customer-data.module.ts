@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CustomerDataComponent } from './customer-data/customer-data.component';
 import { CustomerDataRoutingModule } from './customer-data-routing.module';
 import { NavigationModule } from '../shared/navigation/navigation.module';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -10,7 +11,8 @@ import { NavigationModule } from '../shared/navigation/navigation.module';
   imports: [
     CommonModule,
     CustomerDataRoutingModule,
-    NavigationModule
+    NavigationModule,
+    MatProgressSpinnerModule
   ]
 })
 export class CustomerDataModule {

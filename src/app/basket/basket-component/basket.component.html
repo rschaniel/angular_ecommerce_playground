@@ -3,13 +3,17 @@
 <div *ngIf="items$ | async as items; else loading">
   <ul>
     <li *ngFor="let item of items">
-      {{item.quantity}}x {{item.name}} {{item.price}}$
+      {{ item.quantity }}x {{ item.name }} {{ item.price }}$
     </li>
   </ul>
+
+  <span *ngIf="total$ | async as total">
+    Total {{ total | price }}
+  </span>
   <app-nav-bar nextLink="/customer-data"></app-nav-bar>
 </div>
 
 <ng-template #loading>
-  Loading...
-  <app-nav-bar disabled="true" nextLink="/customer-data"></app-nav-bar>
+  <mat-spinner></mat-spinner>
+  <app-nav-bar [disabled]="true" nextLink="/customer-data"></app-nav-bar>
 </ng-template>

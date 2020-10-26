@@ -13,12 +13,12 @@ const routes: Routes = [
   {
     path: 'customer-data',
     loadChildren: () => import('./customer-data/customer-data.module').then(m => m.CustomerDataModule),
-    data: { preload: true, prefetchAction: customerActions.Load },
+    data: { prefetchAction: customerActions.Load },
   },
   {
     path: 'shipment',
     loadChildren: () => import('./shipment/shipment.module').then(m => m.ShipmentModule),
-    data: { preload: true, prefetchAction: shipmentActions.Load },
+    data: { prefetchAction: shipmentActions.Load },
   }
 ];
 

@@ -4,8 +4,12 @@
   <ul>
     <li *ngFor="let method of shipment.availableMethods">{{method}}</li>
   </ul>
+  <app-nav-bar backLink="/customer-data"></app-nav-bar>
 </div>
 
-<ng-template #loading>Loading...</ng-template>
 
-<app-nav-bar backLink="/customer-data"></app-nav-bar>
+<ng-template #loading>
+  <mat-spinner></mat-spinner>
+  <app-nav-bar [disabled]="true" backLink=".."></app-nav-bar>
+</ng-template>
+

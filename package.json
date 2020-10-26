@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "postinstall": "ngcc",
     "start-mocks": "json-server --watch db.json",
-    "start-mocks-with-delay": "json-server --delay=4000 --watch db.json"
+    "start-mocks-with-delay": "json-server --delay=1000 --watch db.json"
   },
   "private": true,
   "dependencies": {

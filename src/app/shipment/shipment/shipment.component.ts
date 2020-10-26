@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import * as shipmentActions from '../../shared/store/shipment/shipment.actions';
 import { selectShipment } from '../../shared/store/shipment/shipment.selectors';
 import { Shipment } from '../../shared/models/shipment.interface';
 import { ShipmentState } from '../../shared/store/shipment/shipment.reducers';
