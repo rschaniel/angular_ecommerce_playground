@@ -1,7 +1,7 @@
 import { createSelector } from '@ngrx/store';
 import { BasketState } from './basket.reducers';
 import { selectBasketState } from '../../../reducers';
-import { BasketItem, price } from '../../models/basket-item.interface';
+import { BasketItem, Price } from '../../models/basket-item.interface';
 
 
 const selectBasket = createSelector(
@@ -16,5 +16,5 @@ export const selectBasketItems = createSelector(
 
 export const getTotalPrice = createSelector(
   selectBasket,
-  (state: BasketState) => state.items.reduce((a: price, b: BasketItem): price => a + b.quantity * b.price, 0)
+  (state: BasketState) => state.items.reduce((a: Price, b: BasketItem): Price => a + b.quantity * b.price, 0)
 );
