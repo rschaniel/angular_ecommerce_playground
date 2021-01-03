@@ -15,5 +15,8 @@ export class NavBarComponent {
   nextLink: string;
 
   @Input()
+  nextText: string;
+
+  @Input()
   disabled = false;
 }

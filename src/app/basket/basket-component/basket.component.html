@@ -10,7 +10,7 @@
   <span *ngIf="total$ | async as total">
     Total {{ total | price }}
   </span>
-  <app-nav-bar nextLink="/customer-data"></app-nav-bar>
+  <app-nav-bar backLink=".." nextLink="/customer-data"></app-nav-bar>
 </div>
 
 <ng-template #loading>

@@ -4,10 +4,9 @@ interface NominalTyping<NominalT> {
 export type Nominal<T, NominalT> = T & NominalTyping<NominalT>;
 
 export type Price = Nominal<number, 'Price'>;
-export type Quantity = Nominal<number, 'Quantity'>;
 
-export interface BasketItem {
+export interface Product {
   name: string;
   price: Price;
-  quantity: Quantity;
+  image?: string;
 }

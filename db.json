@@ -1,4 +1,41 @@
 {
+  "products": [
+    {
+      "name": "Bag",
+      "price": 20,
+      "image": "bag.jpg"
+    },
+    {
+      "name": "Camera",
+      "price": 399,
+      "image": "camera.jpg"
+    },
+    {
+      "name": "Cup",
+      "price": 5.95,
+      "image": "cup.jpg"
+    },
+    {
+      "name": "Shoe",
+      "price": 200,
+      "image": "shoe.jpg"
+    },
+    {
+      "name": "Sunglasses",
+      "price": 199,
+      "image": "sunglasses.jpg"
+    },
+    {
+      "name": "Watch 1",
+      "price": 699,
+      "image": "watch_1.jpg"
+    },
+    {
+      "name": "Watch 2",
+      "price": 95,
+      "image": "watch_2.jpg"
+    }
+  ],
   "basket-items": [
     {
       "name": "Book",

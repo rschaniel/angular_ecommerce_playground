@@ -6,6 +6,6 @@
 
   <button *ngIf="nextLink" mat-button data-test-selector="next-button"
           [routerLink]="nextLink" color="primary" [disabled]="disabled">
-    Next
+    {{ nextText ? nextText : 'Next' }}
   </button>
 </nav>

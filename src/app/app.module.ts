@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { reducers } from './reducers';
 import { CustomerEffects } from './shared/store/customer/customer.effects';
 import { ShipmentEffects } from './shared/store/shipment/shipment.effects';
+import { ProductEffects } from './shared/store/product/product.effects';
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import { ShipmentEffects } from './shared/store/shipment/shipment.effects';
     BrowserAnimationsModule,
     StoreModule.forRoot(reducers),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    EffectsModule.forRoot([BasketEffects, CustomerEffects, ShipmentEffects])
+    EffectsModule.forRoot([BasketEffects, CustomerEffects, ShipmentEffects, ProductEffects])
   ],
   bootstrap: [AppComponent]
 })
