@@ -11,7 +11,7 @@ export const initialState: ShipmentState = {};
 
 const reducer = createReducer(
   initialState,
-  on(shipmentActions.Store, (state, { shipment }) => ({ shipment }))
+  on(shipmentActions.store, (state, { shipment }) => ({ shipment }))
 );
 
 export function shipmentReducer(state: ShipmentState | undefined, action: Action) {

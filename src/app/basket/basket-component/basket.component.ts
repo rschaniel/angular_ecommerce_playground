@@ -18,7 +18,7 @@ export class BasketComponent implements OnInit {
   constructor(private store: Store<BasketState>) { }
 
   ngOnInit(): void {
-    this.store.dispatch(basketActions.Load());
+    this.store.dispatch(basketActions.load());
     this.items$ = this.store.select(selectBasketItems);
     this.total$ = this.store.select(getTotalPrice);
   }

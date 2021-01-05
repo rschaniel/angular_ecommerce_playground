@@ -11,7 +11,7 @@ export const initialState: BasketState = {};
 
 const reducer = createReducer(
   initialState,
-  on(basketActions.Store, (state, { items }) => ({ items }))
+  on(basketActions.store, (state, { items }) => ({ items }))
 );
 
 export function basketReducer(state: BasketState | undefined, action: Action) {

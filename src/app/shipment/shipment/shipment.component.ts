@@ -17,7 +17,7 @@ export class ShipmentComponent implements OnInit {
   constructor(private store: Store<ShipmentState>) { }
 
   ngOnInit(): void {
-    this.store.dispatch(shipmentActions.Load());
+    this.store.dispatch(shipmentActions.load());
     this.shipment$ = this.store.select(selectShipment);
   }
 

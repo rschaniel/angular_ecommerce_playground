@@ -11,7 +11,7 @@ export const initialState: CustomerState = {};
 
 const reducer = createReducer(
   initialState,
-  on(customerActions.Store, (state, { customer }) => ({ customer }))
+  on(customerActions.store, (state, { customer }) => ({ customer }))
 );
 
 export function customerReducer(state: CustomerState | undefined, action: Action) {

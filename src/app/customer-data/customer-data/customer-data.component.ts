@@ -17,7 +17,7 @@ export class CustomerDataComponent implements OnInit {
   constructor(private store: Store<CustomerState>) { }
 
   ngOnInit(): void {
-    this.store.dispatch(customerActions.Load());
+    this.store.dispatch(customerActions.load());
     this.customer$ = this.store.select(selectCustomer);
   }
 

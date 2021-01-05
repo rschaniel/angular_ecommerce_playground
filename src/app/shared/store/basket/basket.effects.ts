@@ -12,7 +12,7 @@ export class BasketEffects {
     ofType(basketActions.LOAD),
     switchMap(() => this.basketItemsService.getItems()
       .pipe(
-        map(items => basketActions.Store({ items })),
+        map(items => basketActions.store({ items })),
         catchError(() => EMPTY)
       ))
     )

@@ -12,7 +12,7 @@ export class ShipmentEffects {
     ofType(shipmentActions.LOAD),
     switchMap(() => this.shipmentService.getShipmentInfo()
       .pipe(
-        map(shipment => shipmentActions.Store({ shipment })),
+        map(shipment => shipmentActions.store({ shipment })),
         catchError(() => EMPTY)
       ))
     )

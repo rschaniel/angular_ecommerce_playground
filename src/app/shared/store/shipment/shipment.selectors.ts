@@ -1,7 +1,6 @@
 import { createSelector } from '@ngrx/store';
 import { ShipmentState } from './shipment.reducers';
-import { AppState, selectShipmentState } from '../../../reducers';
-import { Shipment } from '../../models/shipment.interface';
+import { selectShipmentState } from '../../../reducers';
 
 
 const selectShipmentData = createSelector(
