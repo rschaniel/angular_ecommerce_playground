@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Customer } from '../models/customer.interface';
+import { Address } from '../models/address.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +12,11 @@ export class CustomerService {
 
   constructor(private httpClient: HttpClient) {}
 
-  public getCustomer(): Observable<Customer> {
-    return this.httpClient.get<Customer>(this.baseUrl + 'customer');
+  public getCustomer(customerId: number): Observable<Customer> {
+    return this.httpClient.get<Customer>(this.baseUrl + 'customer/' + customerId);
   }
 
+  public getCustomerAddresses(customerId: number): Observable<Address[]> {
+    return this.httpClient.get<Address[]>(this.baseUrl + 'customer/' + customerId + '/addresses');
+  }
 }

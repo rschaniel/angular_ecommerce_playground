@@ -8,7 +8,7 @@ const selectShipmentData = createSelector(
   (state: ShipmentState) => state
 );
 
-export const selectShipment = createSelector(
+export const selectShipmentOptions = createSelector(
   selectShipmentData,
-  (state: ShipmentState) => state.shipment
+  (state: ShipmentState) => state.shipmentOptions
 );

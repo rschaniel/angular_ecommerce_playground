@@ -62,11 +62,24 @@
       "quantity": 3
     }
   ],
-  "customer": {
-    "firstName": "John",
-    "lastName": "Doe",
-    "city": "Zurich"
-  },
+  "customer": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Doe",
+      "city": "Zurich"
+    }
+  ],
+  "addresses": [
+    {
+      "id": 1,
+      "customerId": 1,
+      "name": "John Doe",
+      "street": "Main street 1",
+      "city": "Zurich",
+      "postalCode": "8000"
+    }
+  ],
   "shipment": {
     "availableMethods": [
       "Post",

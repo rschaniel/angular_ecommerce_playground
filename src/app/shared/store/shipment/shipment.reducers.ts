@@ -1,17 +1,17 @@
 import * as shipmentActions from './shipment.actions';
 import { Action, createReducer, on } from '@ngrx/store';
-import { Shipment } from '../../models/shipment.interface';
+import { ShipmentOption } from '../../models/shipment.interface';
 
 
 export interface ShipmentState {
-  shipment?: Shipment;
+  shipmentOptions?: ShipmentOption[];
 }
 
 export const initialState: ShipmentState = {};
 
 const reducer = createReducer(
   initialState,
-  on(shipmentActions.store, (state, { shipment }) => ({ shipment }))
+  on(shipmentActions.store, (state, { shipmentOptions }) => ({ shipmentOptions }))
 );
 
 export function shipmentReducer(state: ShipmentState | undefined, action: Action) {

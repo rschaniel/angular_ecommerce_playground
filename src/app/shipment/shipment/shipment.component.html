@@ -1,8 +1,13 @@
 <h1>Shipment</h1>
 
-<div *ngIf="shipment$ | async as shipment; else loading">
+<div *ngIf="shipmentOptions$ | async as shipmentOptions; else loading">
   <ul>
-    <li *ngFor="let method of shipment.availableMethods">{{method}}</li>
+    <li *ngFor="let shipmentOption of shipmentOptions">
+      {{shipmentOption.deliveryMethod}}
+      <ng-container *ngIf="shipmentOption.address">
+        <app-address [address]="shipmentOption.address"></app-address>
+      </ng-container>
+    </li>
   </ul>
   <app-nav-bar backLink="/customer-data"></app-nav-bar>
 </div>

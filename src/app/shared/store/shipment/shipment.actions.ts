@@ -1,8 +1,8 @@
 import { createAction, props } from '@ngrx/store';
-import { Shipment } from '../../models/shipment.interface';
+import { ShipmentOption } from '../../models/shipment.interface';
 
-export const STORE = '[Shipment] Store shipment data';
-export const LOAD = '[Shipment] Load shipment data';
+export const STORE = '[Shipment] Store shipment options';
+export const LOAD = '[Shipment] Load shipment options';
 
-export const store = createAction(STORE, props<{shipment: Shipment}>());
+export const store = createAction(STORE, props<{shipmentOptions: ShipmentOption[]}>());
 export const load = createAction(LOAD);

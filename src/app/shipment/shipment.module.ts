@@ -5,6 +5,7 @@ import { ShipmentRoutingModule } from './shipment-routing.module';
 import { ShipmentComponent } from './shipment/shipment.component';
 import { NavigationModule } from '../shared/navigation/navigation.module';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     CommonModule,
     ShipmentRoutingModule,
     NavigationModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    SharedModule
   ]
 })
 export class ShipmentModule { }

@@ -8,11 +8,11 @@ import { ShipmentService } from '../../services/shipment.service';
 @Injectable()
 export class ShipmentEffects {
 
-  loadShipmentInfo$ = createEffect(() => this.actions$.pipe(
+  loadShipmentOptions$ = createEffect(() => this.actions$.pipe(
     ofType(shipmentActions.LOAD),
-    switchMap(() => this.shipmentService.getShipmentInfo()
+    switchMap(() => this.shipmentService.getShipmentOptions()
       .pipe(
-        map(shipment => shipmentActions.store({ shipment })),
+        map(shipmentOptions => shipmentActions.store({ shipmentOptions })),
         catchError(() => EMPTY)
       ))
     )
