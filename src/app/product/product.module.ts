@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { TitleFilterPipe } from './title-filter.pipe';
 import { MatIconModule } from '@angular/material/icon';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ReviewComponent } from './review/review.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     ProductListComponent,
     TitleFilterPipe,
     ProductDetailComponent,
+    ReviewComponent,
   ],
   imports: [
     CommonModule,

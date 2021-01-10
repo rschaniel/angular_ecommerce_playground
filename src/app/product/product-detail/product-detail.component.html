@@ -1,3 +1,12 @@
 <app-product *ngIf="product$ | async as product"
              [product]="product">
 </app-product>
+
+<h2>Reviews</h2>
+<section *ngIf="reviews$ | async as reviews">
+  <article class="review" *ngFor="let review of reviews">
+    <app-review [review]="review"></app-review>
+  </article>
+</section>
+
+<p *ngIf="error">Reviews couldn't be loaded</p>
