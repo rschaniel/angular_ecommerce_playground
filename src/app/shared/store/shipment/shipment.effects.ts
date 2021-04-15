@@ -5,12 +5,14 @@ import { catchError, map, switchMap } from 'rxjs/operators';
 import { EMPTY } from 'rxjs';
 import { ShipmentService } from '../../services/shipment.service';
 
+const customerId = 1;
+
 @Injectable()
 export class ShipmentEffects {
 
   loadShipmentOptions$ = createEffect(() => this.actions$.pipe(
     ofType(shipmentActions.LOAD),
-    switchMap(() => this.shipmentService.getShipmentOptions()
+    switchMap(() => this.shipmentService.getShipmentOptions(customerId)
       .pipe(
         map(shipmentOptions => shipmentActions.store({ shipmentOptions })),
         catchError(() => EMPTY)

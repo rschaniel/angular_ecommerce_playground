@@ -3,7 +3,7 @@
 <div *ngIf="shipmentOptions$ | async as shipmentOptions; else loading">
   <ul>
     <li *ngFor="let shipmentOption of shipmentOptions">
-      {{shipmentOption.deliveryMethod}}
+      <b>{{shipmentOption.deliveryMethod}}</b>
       <ng-container *ngIf="shipmentOption.address">
         <app-address [address]="shipmentOption.address"></app-address>
       </ng-container>

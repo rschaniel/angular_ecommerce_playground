@@ -80,12 +80,10 @@
       "postalCode": "8000"
     }
   ],
-  "shipment": {
-    "availableMethods": [
-      "Post",
-      "Pickup"
-    ]
-  },
+  "shipment": [
+    "Post",
+    "Pickup"
+  ],
   "payment": {
     "availableMethods": [
       "Credit Card",

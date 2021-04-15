@@ -1,23 +1,22 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { EMPTY, Observable, of } from 'rxjs';
 import { DeliveryMethod, ShipmentOption } from '../models/shipment.interface';
-import { map, switchMap } from 'rxjs/operators';
+import { map, switchMap, tap } from 'rxjs/operators';
 import { CustomerService } from './customer.service';
 import { Address } from '../models/address.interface';
+import { DeliveryMethodService } from './delivery-method.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ShipmentService {
-  private readonly baseUrl = 'http://localhost:3000/';
 
-  constructor(private httpClient: HttpClient,
+  constructor(private deliveryMethodService: DeliveryMethodService,
               private customerService: CustomerService) {
   }
 
   public getShipmentOptions(customerId: number): Observable<ShipmentOption[]> {
-    return this.getDeliveryMethods().pipe(
+    return this.deliveryMethodService.getDeliveryMethods().pipe(
       map((methods: DeliveryMethod[]) =>
         methods.map((method: DeliveryMethod) => ({deliveryMethod: method}))
       ),
@@ -40,9 +39,5 @@ export class ShipmentService {
         }
       )
     );
-  }
-
-  private getDeliveryMethods(): Observable<DeliveryMethod[]> {
-    return this.httpClient.get<DeliveryMethod[]>(this.baseUrl + 'shipment');
   }
 }
