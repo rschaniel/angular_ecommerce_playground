@@ -1,6 +1,9 @@
-<app-product *ngIf="product$ | async as product"
-             [product]="product">
-</app-product>
+<ng-container *ngIf="product$ | async as product">
+  <app-product [product]="product"></app-product>
+  <p>
+    <button (click)="addToCart(product)" mat-button>Add to Cart</button>
+  </p>
+</ng-container>
 
 <h2>Reviews</h2>
 <section *ngIf="reviews$ | async as reviews">

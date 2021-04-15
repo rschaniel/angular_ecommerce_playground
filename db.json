@@ -52,11 +52,13 @@
   ],
   "basket-items": [
     {
+      "id": 1,
       "name": "Book",
       "price": 20,
       "quantity": 1
     },
     {
+      "id": 2,
       "name": "Pencil",
       "price": 2,
       "quantity": 3

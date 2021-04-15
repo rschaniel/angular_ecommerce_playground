@@ -15,4 +15,8 @@ export class BasketItemsService {
     return this.httpClient.get<BasketItem[]>(this.baseUrl + 'basket-items');
   }
 
+  public addItem(basketItem: BasketItem): Observable<BasketItem> {
+    console.log(basketItem);
+    return this.httpClient.post<BasketItem>(this.baseUrl + 'basket-items', basketItem);
+  }
 }

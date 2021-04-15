@@ -6,7 +6,7 @@ import { Address } from '../models/address.interface';
 import { TestScheduler } from 'rxjs/testing';
 import { DeliveryMethodService } from './delivery-method.service';
 
-fdescribe('Shipment Service Marbles', () => {
+describe('Shipment Service Marbles', () => {
 
   let shipmentService: ShipmentService;
   let customerService: CustomerService;

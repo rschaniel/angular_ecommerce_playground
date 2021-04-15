@@ -39,7 +39,7 @@ describe('Shipment Service Subject', () => {
     });
   });
 
-  it('should return the delivery methods without fetching the address if only pickup is available', () => {
+  xit('should return the delivery methods without fetching the address if only pickup is available', () => {
     deliveryMethodsOutput$.next(['Pickup']);
     customerService.getCustomerAddresses = () => of([]);
 

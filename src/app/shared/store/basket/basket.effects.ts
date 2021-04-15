@@ -18,6 +18,16 @@ export class BasketEffects {
     )
   );
 
+  addToCart$ = createEffect(() => this.actions$.pipe(
+    ofType(basketActions.ADD_TO_CART),
+    switchMap(({item}) => this.basketItemsService.addItem(item)
+      .pipe(
+        catchError(() => EMPTY)
+      ))
+    ),
+    { dispatch: false }
+  );
+
   constructor(
     private actions$: Actions,
     private basketItemsService: BasketItemsService

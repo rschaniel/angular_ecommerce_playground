@@ -11,6 +11,7 @@ import { TitleFilterPipe } from './title-filter.pipe';
 import { MatIconModule } from '@angular/material/icon';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ReviewComponent } from './review/review.component';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ReviewComponent } from './review/review.component';
     SharedModule,
     MatFormFieldModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule
   ]
 })
 export class ProductModule {
