@@ -1,4 +1,4 @@
-import { async, ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, TestBed, tick, waitForAsync } from '@angular/core/testing';
 
 import { NavBarComponent } from './nav-bar.component';
 import { Router } from '@angular/router';
@@ -10,7 +10,7 @@ describe('NavBarComponent', () => {
   let fixture: ComponentFixture<NavBarComponent>;
   let router: Router;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [NavBarComponent],
       imports: [RouterTestingModule.withRoutes(
