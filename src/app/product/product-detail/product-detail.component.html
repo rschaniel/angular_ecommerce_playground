@@ -1,7 +1,12 @@
+<p>
+  <button mat-raised-button color="primary" [routerLink]="['/products']">back</button>
+</p>
+
+
 <ng-container *ngIf="product$ | async as product">
   <app-product [product]="product"></app-product>
   <p>
-    <button (click)="addToCart(product)" mat-button>Add to Cart</button>
+    <button color="primary" (click)="addToCart(product)" mat-raised-button>Add to Cart</button>
   </p>
 </ng-container>
 
