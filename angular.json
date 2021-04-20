@@ -107,9 +107,7 @@
               "apps/prefetching-sample/tsconfig.app.json",
               "apps/prefetching-sample/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -146,12 +144,137 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/prefetching-sample-e2e/tsconfig.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
+    },
+    "orders": {
+      "projectType": "application",
+      "root": "apps/orders",
+      "sourceRoot": "apps/orders/src",
+      "prefix": "prefetching-sample",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/orders",
+            "index": "apps/orders/src/index.html",
+            "main": "apps/orders/src/main.ts",
+            "polyfills": "apps/orders/src/polyfills.ts",
+            "tsConfig": "apps/orders/tsconfig.app.json",
+            "aot": true,
+            "assets": ["apps/orders/src/favicon.ico", "apps/orders/src/assets"],
+            "styles": ["apps/orders/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/orders/src/environments/environment.ts",
+                  "with": "apps/orders/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "orders:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "orders:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "orders:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/orders/src/**/*.ts",
+              "apps/orders/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/orders"],
+          "options": {
+            "jestConfig": "apps/orders/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "orders-e2e": {
+      "root": "apps/orders-e2e",
+      "sourceRoot": "apps/orders-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/orders-e2e/cypress.json",
+            "tsConfig": "apps/orders-e2e/tsconfig.e2e.json",
+            "devServerTarget": "orders:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "orders:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/orders-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    }
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
     }
   }
 }

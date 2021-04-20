@@ -6,3 +6,25 @@
 .content {
   padding: 10px;
 }
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.toolbar span {
+  float: right;
+  line-height: 40px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.toolbar .logo {
+  display: inline-block;
+}
+
+.toolbar a {
+  color: white;
+  text-decoration: none;
+}

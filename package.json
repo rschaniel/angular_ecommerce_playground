@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "nx",
+    "preinstall": "npx npm-force-resolutions",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
@@ -29,6 +30,9 @@
     "workspace-schematic": "nx workspace-schematic",
     "help": "nx help"
   },
+  "resolutions": {
+    "webpack": "^5.0.0"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~11.2.10",
@@ -45,35 +49,53 @@
     "@ngrx/entity": "^11.1.0",
     "@ngrx/store": "^11.1.0",
     "@ngrx/store-devtools": "^11.1.0",
+    "@nrwl/angular": "12.0.6",
     "@nrwl/workspace": "^12.0.6",
+    "npm-force-resolutions": "0.0.10",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.10.3",
-    "@nrwl/angular": "12.0.6"
+    "zone.js": "~0.10.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1102.9",
+    "@angular-eslint/eslint-plugin": "~2.0.2",
+    "@angular-eslint/eslint-plugin-template": "~2.0.2",
+    "@angular-eslint/template-parser": "~2.0.2",
     "@angular/cli": "~11.2.9",
     "@angular/compiler-cli": "~11.2.10",
     "@angular/language-service": "~11.2.10",
     "@ngrx/schematics": "^9.2.0",
+    "@nrwl/cypress": "12.0.6",
+    "@nrwl/eslint-plugin-nx": "12.0.6",
+    "@nrwl/jest": "12.0.6",
+    "@nrwl/linter": "12.0.6",
+    "@nrwl/workspace": "12.0.6",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/jest": "26.0.8",
     "@types/node": "^12.11.1",
+    "@typescript-eslint/eslint-plugin": "4.19.0",
+    "@typescript-eslint/parser": "4.19.0",
     "codelyzer": "^6.0.0",
+    "cypress": "^6.0.1",
+    "eslint": "7.22.0",
+    "eslint-config-prettier": "8.1.0",
+    "eslint-plugin-cypress": "^2.10.3",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
+    "jest": "26.2.2",
+    "jest-preset-angular": "8.3.2",
     "json-server": "^0.16.1",
     "karma": "~6.3.2",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "prettier": "2.2.1",
     "protractor": "~7.0.0",
+    "ts-jest": "26.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.1.5",
-    "@nrwl/workspace": "12.0.6",
-    "prettier": "2.2.1"
+    "typescript": "~4.1.5"
   }
 }
