@@ -7,15 +7,24 @@
     "nx.json": "*",
     "tsconfig.base.json": "*"
   },
-  "affected": { "defaultBase": "master" },
+  "affected": {
+    "defaultBase": "master"
+  },
   "npmScope": "prefetching-sample",
   "projects": {
-    "prefetching-sample": { "tags": [] },
-    "prefetching-sample-e2e": {
-      "tags": [],
-      "implicitDependencies": ["prefetching-sample"]
+    "orders": {
+      "tags": []
     },
-    "orders": { "tags": [] },
-    "orders-e2e": { "tags": [], "implicitDependencies": ["orders"] }
+    "orders-e2e": {
+      "tags": [],
+      "implicitDependencies": ["orders"]
+    },
+    "main": {
+      "tags": []
+    },
+    "main-e2e": {
+      "tags": [],
+      "implicitDependencies": ["main"]
+    }
   }
 }

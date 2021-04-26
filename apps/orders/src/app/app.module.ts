@@ -8,9 +8,15 @@ import { RouterModule } from '@angular/router';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabled' }),
+    RouterModule.forRoot([
+      {
+        path: '',
+        loadChildren: () => import('./order/order.module').then(m => m.OrderModule)
+      }
+    ], {initialNavigation: 'enabled'}),
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+}
