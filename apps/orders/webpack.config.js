@@ -19,17 +19,11 @@ module.exports = {
     new ModuleFederationPlugin({
       
         // For remotes (please adjust)
-        // name: "orders",
-        // filename: "remoteEntry.js",
-        // exposes: {
-        //     './Component': './apps/orders/src/app/app.component.ts',
-        // },        
-        
-        // For hosts (please adjust)
-        // remotes: {
-        //     "main": "main@http://localhost:5000/remoteEntry.js",
-
-        // },
+        name: "orders",
+        filename: "remoteEntry.js",
+        exposes: {
+            './OrderModule': './apps/orders/src/app/order/order.module.ts',
+        },
 
         shared: {
           "@angular/core": { singleton: true, strictVersion: true }, 

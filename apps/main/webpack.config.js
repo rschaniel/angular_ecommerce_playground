@@ -17,19 +17,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      
-        // For remotes (please adjust)
-        // name: "main",
-        // filename: "remoteEntry.js",
-        // exposes: {
-        //     './Component': './apps/main/src/app/app.component.ts',
-        // },        
-        
         // For hosts (please adjust)
-        // remotes: {
-        //     "orders": "orders@http://localhost:4200/remoteEntry.js",
-
-        // },
+        remotes: {
+             "orders": "orders@http://localhost:5000/remoteEntry.js",
+        },
 
         shared: {
           "@angular/core": { singleton: true, strictVersion: true }, 
