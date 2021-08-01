@@ -62,6 +62,12 @@
       "name": "Pencil",
       "price": 2,
       "quantity": 3
+    },
+    {
+      "name": "Bag",
+      "price": 20,
+      "quantity": 1,
+      "id": 3
     }
   ],
   "customer": [

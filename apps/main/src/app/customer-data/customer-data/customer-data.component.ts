@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Customer } from '../../shared/models/customer.interface';
+import { Customer } from '../../core/models/customer.interface';
 import { Observable } from 'rxjs';
 import { CustomerState } from '../../shared/store/customer/customer.reducers';
 import { Store } from '@ngrx/store';

@@ -1,8 +1,8 @@
 import { ShipmentService } from './shipment.service';
 import { CustomerService } from './customer.service';
-import { DeliveryMethod, ShipmentOption } from '../models/shipment.interface';
+import { DeliveryMethod, ShipmentOption } from '../../core/models/shipment.interface';
 import { Observable, of, Subject } from 'rxjs';
-import { Address } from '../models/address.interface';
+import { Address } from '../../core/models/address.interface';
 import { DeliveryMethodService } from './delivery-method.service';
 
 describe('Shipment Service Subject', () => {

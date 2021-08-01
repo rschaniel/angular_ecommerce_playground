@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { BasketItem } from '../../models/basket-item.interface';
+import { BasketItem } from '../../../core/models/basket-item.interface';
 
 export const STORE = '[Basket] Store items';
 export const LOAD = '[Basket] Load items';

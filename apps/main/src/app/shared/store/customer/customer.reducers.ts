@@ -1,6 +1,6 @@
 import * as customerActions from './customer.actions';
 import { Action, createReducer, on } from '@ngrx/store';
-import { Customer } from '../../models/customer.interface';
+import { Customer } from '../../../core/models/customer.interface';
 
 export interface CustomerState {
   customer?: Customer;

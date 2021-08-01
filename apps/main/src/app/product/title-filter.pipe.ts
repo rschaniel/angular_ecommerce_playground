@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Product } from '../shared/models/product.interface';
+import { Product } from '../core/models/product.interface';
 
 @Pipe({ name: 'filterByTitle' })
 export class TitleFilterPipe implements PipeTransform {

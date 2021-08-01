@@ -1,6 +1,6 @@
 import * as shipmentActions from './shipment.actions';
 import { Action, createReducer, on } from '@ngrx/store';
-import { ShipmentOption } from '../../models/shipment.interface';
+import { ShipmentOption } from '../../../core/models/shipment.interface';
 
 export interface ShipmentState {
   shipmentOptions?: ShipmentOption[];

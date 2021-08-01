@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { fromEvent, Observable } from 'rxjs';
-import { Product } from '../../shared/models/product.interface';
+import { Product } from '../../core/models/product.interface';
 import { Store } from '@ngrx/store';
 import { ProductState } from '../../shared/store/product/product.reducers';
 import * as productActions from '../../shared/store/product/product.actions';

@@ -1,7 +1,7 @@
 import { createSelector } from '@ngrx/store';
 import { ProductState } from './product.reducers';
 import { selectProductState } from '../../../reducers';
-import { Product } from '../../models/product.interface';
+import { Product } from '../../../core/models/product.interface';
 
 export interface IdProps {
   id: number;

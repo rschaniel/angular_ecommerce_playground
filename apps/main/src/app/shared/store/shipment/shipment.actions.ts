@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { ShipmentOption } from '../../models/shipment.interface';
+import { ShipmentOption } from '../../../core/models/shipment.interface';
 
 export const STORE = '[Shipment] Store shipment options';
 export const LOAD = '[Shipment] Load shipment options';

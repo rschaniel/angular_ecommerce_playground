@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Price } from '../models/basket-item.interface';
+import { Price } from '../../core/models/basket-item.interface';
 
 @Pipe({ name: 'price' })
 export class PricePipe implements PipeTransform {

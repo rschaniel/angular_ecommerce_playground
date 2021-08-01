@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BasketItem, Price } from '../../shared/models/basket-item.interface';
+import { BasketItem, Price } from '../../core/models/basket-item.interface';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { BasketState } from '../../shared/store/basket/basket.reducers';

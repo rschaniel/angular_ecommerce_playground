@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { Review } from '../../shared/models/reviews.interface';
+import { Review } from '../../core/models/reviews.interface';
 
 @Component({
   selector: 'app-review',

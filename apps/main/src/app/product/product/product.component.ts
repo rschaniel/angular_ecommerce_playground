@@ -4,7 +4,7 @@ import {
   Input,
   OnInit,
 } from '@angular/core';
-import { Product } from '../../shared/models/product.interface';
+import { Product } from '../../core/models/product.interface';
 
 @Component({
   selector: 'app-product',

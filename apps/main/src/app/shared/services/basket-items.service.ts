@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { BasketItem } from '../models/basket-item.interface';
+import { BasketItem } from '../../core/models/basket-item.interface';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({

@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import * as shipmentActions from '../../shared/store/shipment/shipment.actions';
 import { ShipmentState } from '../../shared/store/shipment/shipment.reducers';
-import { ShipmentOption } from '../../shared/models/shipment.interface';
+import { ShipmentOption } from '../../core/models/shipment.interface';
 import { selectShipmentOptions } from '../../shared/store/shipment/shipment.selectors';
 
 @Component({

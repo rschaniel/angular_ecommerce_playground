@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { Address } from '../../models/address.interface';
+import { Address } from '../../../core/models/address.interface';
 
 @Component({
   selector: 'app-address',

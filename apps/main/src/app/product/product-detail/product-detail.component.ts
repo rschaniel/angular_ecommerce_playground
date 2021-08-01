@@ -3,10 +3,10 @@ import { ActivatedRoute } from '@angular/router';
 import * as productActions from '../../shared/store/product/product.actions';
 import { Store } from '@ngrx/store';
 import { ProductState } from '../../shared/store/product/product.reducers';
-import { Product } from '../../shared/models/product.interface';
+import { Product } from '../../core/models/product.interface';
 import { Observable, throwError } from 'rxjs';
 import { ReviewService } from '../../shared/services/review.service';
-import { Review } from '../../shared/models/reviews.interface';
+import { Review } from '../../core/models/reviews.interface';
 import { selectProductById } from '../../shared/store/product/product.selectors';
 import { catchError } from 'rxjs/operators';
 

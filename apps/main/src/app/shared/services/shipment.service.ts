@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { EMPTY, Observable, of } from 'rxjs';
-import { DeliveryMethod, ShipmentOption } from '../models/shipment.interface';
-import { map, switchMap, tap } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import { DeliveryMethod, ShipmentOption } from '../../core/models/shipment.interface';
+import { map, switchMap } from 'rxjs/operators';
 import { CustomerService } from './customer.service';
-import { Address } from '../models/address.interface';
+import { Address } from '../../core/models/address.interface';
 import { DeliveryMethodService } from './delivery-method.service';
 
 @Injectable({
